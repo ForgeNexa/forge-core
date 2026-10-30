@@ -1,0 +1,62 @@
+<svg viewBox="0 0 800 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="480" rx="12" fill="#0A0C0E" stroke="#242933" stroke-width="2"/>
+  <path d="M0 12C0 5.37258 5.37258 0 12 0H788C794.627 0 800 5.37258 800 12V36H0V12Z" fill="#14171C"/>
+  <circle cx="20" cy="18" r="5" fill="#ED6A5E"/>
+  <circle cx="36" cy="18" r="5" fill="#F4BF4F"/>
+  <circle cx="52" cy="18" r="5" fill="#61C554"/>
+  <text x="400" y="22" fill="#8B949E" font-size="11" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" text-anchor="middle">forge-terminal — Multiplexed PTY Session — ForgeNexa</text>
+
+  <!-- Terminal Tab Bar -->
+  <rect x="0" y="36" width="800" height="30" fill="#0E1116" stroke="#1E222B" stroke-width="1"/>
+  <rect x="10" y="40" width="160" height="26" rx="4" fill="#1A1E26"/>
+  <text x="24" y="56" fill="#7EE787" font-size="11" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">1: zsh (worker)</text>
+  <rect x="176" y="40" width="160" height="26" rx="4" fill="#0E1116"/>
+  <text x="190" y="56" fill="#8B949E" font-size="11" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">2: htop (monitor)</text>
+  <rect x="342" y="40" width="160" height="26" rx="4" fill="#0E1116"/>
+  <text x="356" y="56" fill="#8B949E" font-size="11" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">3: go run (server)</text>
+
+  <!-- Split Screen Divider -->
+  <line x1="400" y1="66" x2="400" y2="480" stroke="#1E222B" stroke-width="2"/>
+
+  <!-- Left Pane: Interactive Zsh -->
+  <text x="20" y="96" fill="#7EE787" font-size="11" font-family="monospace">forgenexa@workstation</text>
+  <text x="176" y="96" fill="#388BFD" font-size="11" font-family="monospace">~/dev/forge</text>
+  <text x="270" y="96" fill="#D2A8FF" font-size="11" font-family="monospace">(main)</text>
+  <text x="20" y="116" fill="#C9D1D9" font-size="11" font-family="monospace">$ pnpm test</text>
+  <text x="20" y="146" fill="#7EE787" font-size="11" font-family="monospace">PASS </text>
+  <text x="60" y="146" fill="#C9D1D9" font-size="11" font-family="monospace">internal/concurrency (2.1s)</text>
+  <text x="20" y="166" fill="#7EE787" font-size="11" font-family="monospace">PASS </text>
+  <text x="60" y="166" fill="#C9D1D9" font-size="11" font-family="monospace">internal/security (0.4s)</text>
+  <text x="20" y="186" fill="#7EE787" font-size="11" font-family="monospace">PASS </text>
+  <text x="60" y="186" fill="#C9D1D9" font-size="11" font-family="monospace">services/forge-daemon/pkg/lsp (1.2s)</text>
+  <text x="20" y="206" fill="#7EE787" font-size="11" font-family="monospace">PASS </text>
+  <text x="60" y="206" fill="#C9D1D9" font-size="11" font-family="monospace">services/forge-daemon/pkg/git (0.8s)</text>
+  <text x="20" y="236" fill="#C9D1D9" font-size="11" font-family="monospace">Test Suites: 16 passed, 16 total</text>
+  <text x="20" y="256" fill="#C9D1D9" font-size="11" font-family="monospace">Tests:       64 passed, 64 total</text>
+  <text x="20" y="276" fill="#C9D1D9" font-size="11" font-family="monospace">Snapshots:   0 total</text>
+  <text x="20" y="296" fill="#C9D1D9" font-size="11" font-family="monospace">Time:        4.512s</text>
+
+  <!-- Prompt Cursor -->
+  <text x="20" y="336" fill="#7EE787" font-size="11" font-family="monospace">forgenexa@workstation</text>
+  <text x="176" y="336" fill="#388BFD" font-size="11" font-family="monospace">~/dev/forge</text>
+  <text x="270" y="336" fill="#D2A8FF" font-size="11" font-family="monospace">(main)</text>
+  <text x="20" y="356" fill="#C9D1D9" font-size="11" font-family="monospace">$ </text>
+  <rect x="36" y="344" width="8" height="15" fill="#7EE787"/>
+
+  <!-- Right Pane: Process Telemetry -->
+  <text x="420" y="96" fill="#388BFD" font-size="11" font-family="monospace">PID  COMMAND          CPU%   MEM%   STATUS</text>
+  <text x="420" y="120" fill="#7EE787" font-size="11" font-family="monospace">1042 forge-daemon     0.4%   18MB   RUNNING</text>
+  <text x="420" y="140" fill="#C9D1D9" font-size="11" font-family="monospace">1088 gopls (LSP)      1.2%   64MB   SLEEPING</text>
+  <text x="420" y="160" fill="#C9D1D9" font-size="11" font-family="monospace">1092 tsserver (TS)    0.8%   82MB   SLEEPING</text>
+  <text x="420" y="180" fill="#C9D1D9" font-size="11" font-family="monospace">1104 fsnotify-worker  0.1%    8MB   LISTENING</text>
+  <text x="420" y="200" fill="#C9D1D9" font-size="11" font-family="monospace">1150 pty-supervisor   0.2%   12MB   ACTIVE</text>
+
+  <!-- Memory Gauge Graphic -->
+  <rect x="420" y="240" width="350" height="8" rx="4" fill="#1A1E26"/>
+  <rect x="420" y="240" width="120" height="8" rx="4" fill="#388BFD"/>
+  <text x="420" y="266" fill="#8B949E" font-size="10" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Memory: 184MB / 16.0GB (1.1%)</text>
+  
+  <rect x="420" y="290" width="350" height="8" rx="4" fill="#1A1E26"/>
+  <rect x="420" y="290" width="60" height="8" rx="4" fill="#7EE787"/>
+  <text x="420" y="316" fill="#8B949E" font-size="10" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">CPU: 2.7% (8 Cores Native)</text>
+</svg>
